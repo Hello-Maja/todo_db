@@ -39,6 +39,24 @@ task "console" do
   exec "irb -r./config/application"
 end
 
+# desc "Testing for control flow"
+# task "test_control_flow" do
+#   puts "should do nothing"
+#   exec "ruby ./app/controllers/controller.rb add"
+#   puts "should print added"
+#   exec "ruby ./app/controllers/controller.rb add argument"
+#   puts "should do nothing"
+#   exec "ruby ./app/controllers/controller.rb remove"
+#   puts "should print removed"
+#   exec "ruby ./app/controllers/controller.rb remove argument"
+#   puts "should print list"
+#   exec "ruby ./app/controllers/controller.rb list"
+#   puts "should do nothing"
+#   exec "ruby ./app/controllers/controller.rb complete"
+#   puts "should print completed"
+#   exec "ruby ./app/controllers/controller.rb complete argument"
+# end
+
 desc "Run the specs"
 RSpec::Core::RakeTask.new(:spec)
 
