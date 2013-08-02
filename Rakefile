@@ -1,5 +1,6 @@
 require 'rake'
 require 'rspec/core/rake_task'
+# require_relative 'db/migrate/seeds'
 
 require_relative 'config/application'
 
@@ -56,6 +57,13 @@ end
 #   puts "should print completed"
 #   exec "ruby ./app/controllers/controller.rb complete argument"
 # end
+
+desc 'Seed the task list with awesome catch phrases'
+task "db:seed" do
+  require './db/seeds.rb'
+  # Seed.generate_task_list
+end
+
 
 desc "Run the specs"
 RSpec::Core::RakeTask.new(:spec)
