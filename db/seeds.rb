@@ -2,9 +2,9 @@ require 'Faker'
 
 class Seed
 
-  def move_to_db(description, status)
-    Tasks.add(:description => 'description', :status => 'status')
+  def self.generate_task_list 
+   10.times do
+     Task.create :description => Faker::Company.catch_phrase
   end
-end
 
-Seed.move_to_db("Ned", "False")
+end
