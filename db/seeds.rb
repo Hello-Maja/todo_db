@@ -10,6 +10,5 @@ require_relative '../app/models/task'
 # end
 
 10.times do
-  Task.create! :description => Faker::Company.catch_phrase,
-              :completed => false
+  Task.create! :description => Faker::Company.catch_phrase
 end
