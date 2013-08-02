@@ -1,3 +1,4 @@
+require_relative '../../config/application.rb'
 require_relative '../models/task.rb'
 require_relative '../views/viewer'
 
