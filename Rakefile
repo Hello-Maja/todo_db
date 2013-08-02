@@ -1,5 +1,6 @@
 require 'rake'
 require 'rspec/core/rake_task'
+# require_relative 'db/migrate/seeds'
 
 require_relative 'config/application'
 
@@ -37,6 +38,12 @@ end
 desc 'Start IRB with application environment loaded'
 task "console" do
   exec "irb -r./config/application"
+end
+
+desc 'Seed the task list with awesome catch phrases'
+task "db:seed" do
+  require './db/seeds.rb'
+  # Seed.generate_task_list
 end
 
 desc "Run the specs"
